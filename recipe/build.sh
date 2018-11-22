@@ -7,9 +7,11 @@ cd build
 export CXXFLAGS=$(echo $CXXFLAGS | sed "s/-std=c++[0-9][0-9]//")
 export CXXFLAGS="$CXXFLAGS -std=c++11"
 
-cmake -G "Ninja" \
-      -DCMAKE_INSTALL_PREFIX=$PREFIX \
+#cmake -G "Ninja" \
+cmake                                   \
+      -DCMAKE_INSTALL_PREFIX=$PREFIX    \
       -DCMAKE_BUILD_TYPE:STRING=Release \
       ..
 
-ninja install
+#ninja install
+make install
